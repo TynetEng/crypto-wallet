@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+$mainColor: blue;
+$font: 'Satisfy';
+$ft: 'Signika';
+.parent{
+    .fill{
+        width: 30%;
+        margin: auto;
+        margin-top: 80px;
+        .headie{
+            color: $mainColor;
+            text-align: center;
+            font-family: $font;
+        }
+        .form-group{
+            label{
+                font-weight: bold;
+                font-size: 12px;
+            }
+            span{
+                font-size: 10px;
+            }
+            .bee{
+                margin-top: 5px;
+                background-color: rgba($color: blue, $alpha: 0.1);
+                width: 100%;
+                padding-left: 10px;
+                text-align: left;
+                padding: 3px 10px;
+            }
+            input{
+                border: 0px;
+                width: 90%;
+                background-color: transparent;
+                margin-left: 10px;
+                font-size: 12px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .tip{
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            .pen{
+                border: 0px;
+                background-color: transparent;
+                &:hover{
+                    color: $mainColor;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .fill-main{
+            margin: auto !important;
+            text-align: center !important;
+        }
+        .fille{
+            margin: auto !important;
+            background-color: $mainColor;
+            border-radius: 20px;
+            width: 40% !important;
+            padding: 5px 30px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            margin-top: 10px !important;
+            &:hover{
+                transition: all 1s;
+                animation-timing-function: ease-in;
+                border: none !important;
+                background-color: white;
+                color: $mainColor;
+            }
+        }
+    }
+}
+@media (max-width:760px){
+    .parent{
+        .fill{
+            margin: 0px !important;
+            margin-top: 50px !important;
+            width: 100% !important;
+        }
+        .fill-main{
+            text-align: center !important;
+            margin: auto !important;
+        }
+    }
+}

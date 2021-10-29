@@ -1,0 +1,103 @@
+$mainColor: blue;
+$color: white;
+$font: 'Satisfy';
+$ft: 'Signika';
+.container-fluid, .row, .col-sm{
+    margin: 0px;
+    padding: 0px;
+}
+.parent{
+    .deal-main{
+        margin-top: 40px;
+        display: flex;
+        button{
+            margin-left: 10px;
+            padding: 5px 15px;
+            font-weight: bold;
+            border: 0px;
+            border-radius: 5px;
+            color: $color;
+            
+        }
+        .buy{
+            background-color: green;
+        }
+        .sell{
+            background-color: red;
+        }
+    }
+    .main-body{
+        margin-top: 40px;
+        .fill{
+            display: flex;
+            select{
+                margin-right: 5px ;
+            }
+            .tot{
+                margin-left: 5px;
+                button{
+                    border: 0px;
+                    border-radius: 5px;
+                    background-color: $mainColor;
+                    color: $color;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+    .tab{
+        table, tr, td, th{
+            border: 2px solid lightgray;
+            border-collapse: collapse;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            margin-top: 30px;
+        }
+        tbody{
+            tr:nth-child(even) {
+                background-color: lightgray;
+            }
+        }
+    }
+    
+    
+}
+
+@media (max-width:760px){
+    .container-fluid, .row, .container, .col-sm{
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .parent{
+        padding: 0px !important;
+        margin: 0px !important;
+        .main-body{
+            .fill{
+                display: block !important;
+                input{
+                    display: block;
+                    margin-top: 5px;
+                }
+                .tot{
+                    margin-left: 0px !important;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .tab{
+            table, tr, td, th{
+                padding: 5px !important;
+            }
+            table{
+                width: 100% !important;
+                
+            }
+        }
+        .main-body{
+            margin-left: 10px;
+        }
+    }
+}

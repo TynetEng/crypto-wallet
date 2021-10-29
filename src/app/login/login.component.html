@@ -1,0 +1,51 @@
+<div class="parent">
+<div class="card card-body fill">
+    <div>
+        <div class="headie">
+            <h2> TYNET</h2>
+        </div>
+        <div class="alert alert-danger" *ngIf="invalidDetails">
+            <strong>{{invalidDetails}}</strong>
+        </div>
+        <div class="alert alert-success" *ngIf="validDetails">
+            <strong>{{validDetails}}</strong>
+        </div>
+        <div>
+            <form class="form" [formGroup]="forms" novalidate (ngSubmit)="submitDetails()">
+                
+                <div class="form-group">
+                    <label for=""> EMAIL </label>
+                    <div class="bee">
+                        <i class="fa fa-envelope-o"></i>
+                        <input type="text" formControlName="email" [(ngModel)]='emailLog'>
+                    </div>
+                    <span style="color: red;" *ngIf="email?.invalid && email?.touched">Invalid Email</span>
+                </div>
+                <div class="form-group">
+                    <label for=""> PASSWORD </label>
+                    <div class="bee">
+                        <i class="fa fa-user-o"></i>
+                        <input type="password" formControlName="pass" [(ngModel)]='passLog'>
+                    </div>
+                    <span style="color: red;" *ngIf="pass?.invalid && pass?.touched">Invalid Password</span>
+                </div>
+                <div class="tip">
+                    <div>
+                        <input type="checkbox">
+                        <span> Remember me</span>
+                    </div>
+                    <div>
+                        <span class="pen">Forgot password?</span>
+                    </div>
+                </div>
+                <div class="fill-main">
+                    <button class="fille" [disabled]="forms?.invalid">
+                        <span *ngIf="submitted" class="fa fa-spin fa-spinner"></span> LOGIN
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</div>

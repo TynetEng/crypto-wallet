@@ -1,0 +1,57 @@
+<main class="row">
+    <main class="col-sm">
+        <div class="parent container-fluid">
+            <div class="container">
+                <div class="deal-main">
+                    <div>
+                        <button class="buy" (click)="buy()"> BUY </button>
+                    </div>
+                    <div>
+                        <button class="sell" (click)="sell()"> SELL </button>
+                    </div>
+                </div>
+                <div class="main-body">
+                    <div *ngFor="let n of details" class="fill">
+                        <select name="" id="" (change)="changeCoin(this)" [(ngModel)]="statusCoin">
+                            <option value="select"  [selected]="statusCoin=='select'">Select coin</option>
+                            <option value="ETH">Ethereum</option>
+                            <option value="BTC">Bitcoin</option>
+                        </select>
+                        <input type="text" required (input)='conCurrency()' [(ngModel)]="amt" class="me-2">
+                        <input type="text" [value]="convert"  [disabled]='n.display'>
+                       <div class="tot">
+                        <button (click)="coinTran()" [disabled]="n.disk">PROCEED</button>
+                       </div>
+                    </div>
+                </div>
+                
+                <div class="tab row">
+                    <div class="col-sm">
+                        <table *ngIf="showTable">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>TRANSACTION NUMBER</th>
+                                    <th>TRANSACTION AMOUNT</th>
+                                    <th>DATE</th>
+                                    <th>TRANSACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i= index; let a of transactionDetails">
+                                    <td>{{i+1}}</td>
+                                    <td>{{a.tN}}</td>
+                                    <td>{{a.coin}}</td>
+                                    <td>{{a.dt | date:"short"}}</td>
+                                    <td>{{a.status}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+</main>

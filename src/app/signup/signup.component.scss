@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+$mainColor: blue;
+$font: 'Satisfy';
+$ft: 'Signika';
+.parent{
+    margin-top: 10px;
+    border-radius: 10px;
+    max-height: 550px;
+    .panel1{
+        display: flex;
+        margin: auto;
+        margin-left: 15%;
+        .child1{
+            background-color: $mainColor;
+            color: white;
+            padding-top: 200px;
+            padding-bottom: 280px;
+            text-align: center;
+            width: 40%;
+            height: 620px !important;
+            border-radius: 10px 0px 0px 10px;
+            
+        }
+        .child2{
+            width: 40% !important;
+            height: 100% !important;
+            margin: auto;
+            margin-left: -0px;
+            height: 600px !important;
+            padding-bottom: 20px;
+            margin-top: -0%;
+            .bell{
+                padding-bottom: 73px;
+                border-radius: 0px 10px 10px 0px;
+                height: 620px !important;
+                .bell-main{
+                    width: 80%;
+                    margin: auto;
+                    .headie{
+                        display: none;
+                        color: $mainColor;
+                        text-align: center;
+                    }
+                    .alert{
+                        padding: 2px 10px!important;
+                    }
+                }
+                .bee{
+                    color: $mainColor;
+                    text-align: center;
+                }
+                .pe{
+                    text-align: center;
+                }
+                .fill{
+                    margin: auto !important;
+                    background-color: $mainColor;
+                    border-radius: 20px;
+                    padding: 5px 30px;
+                    color: white;
+                    font-weight: bold;
+                    border: none;
+                    margin-top: 10px !important;
+                    &:hover{
+                        transition: all 1s;
+                        animation-timing-function: ease-in;
+                        border: none !important;
+                        background-color: white;
+                        color: $mainColor;
+                    }
+                }
+                .form-group{
+                    
+
+                    label{
+                        font-size: 12px;
+                        font-weight: bold;
+                        // position: absolute;
+                        
+                    }
+                    .bay{
+                        margin-top: 5px;
+                        background-color: rgba($color: blue, $alpha: 0.1);
+                        width: 100%;
+                        padding-left: 10px;
+                        text-align: left;
+                        padding: 3px 10px;
+                        input{
+                            border: 0px;
+                            outline: 0px;
+                            background-color: transparent !important;
+                            padding-left: 10px;
+                            font-size: 12px;
+                            width: 80%;
+
+                            // &:focus{
+                            //     .txt{
+                            //         transform: translateY(-10px);
+                            //         transition: all 2s;
+                            //     }
+                            // }
+                        }
+                        
+                    }
+                    span{
+                        font-size: 10px;
+                    }
+                }
+                .down{
+                    font-size: 12px;
+                    padding-top: 5px;
+                    padding-bottom: 10px;
+                    .log{
+                        color: $mainColor;
+                        font-weight: bold;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .file{
+                    margin: auto;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px;
+                    .bag{
+                        background-color: transparent;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 1px solid lightgray; 
+                        padding: 3px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 5px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width:760px){
+    .container-fluid, .container{
+        padding: 0px;
+        margin: 0px;
+    }
+    .parent{
+        width: 100%;
+        height: 80px;
+        margin: 0px !important;
+        margin-top: 0px !important;
+        .panel1{
+            display: block !important;
+            margin: 0px !important;
+            .child1{
+                display: none !important;
+            }
+            .child2{
+                width: 100% !important;
+                padding: 0px !important;
+                height: 250px;
+                padding-top: 20px !important;
+                margin: auto;
+                .bell{
+                    width: 100%;
+                    border-radius: 0px !important;
+                    padding-bottom: 30px;
+                    .bell-main{
+                        width: 100% !important;
+                        .headie{
+                            display: inherit !important;
+                            font-family: $ft !important;
+                        }
+                    }
+                    .down, .down2{
+                        text-align: center !important;
+                        margin: auto !important;
+                    }
+                }
+                .clay{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

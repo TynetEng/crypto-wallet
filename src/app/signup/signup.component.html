@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="parent container">
+        <div class="panel1 row" id="panel1">
+            <div class="child1">
+                <div>
+                    <h2>Welcome Back!</h2>
+                </div>
+                <div>
+                    <p> To stay connected with us, <br> please sign in with your personal info</p>
+                </div>
+            </div>
+            <div class="child2">
+                <div class="card card-body bell">
+                    <div class="bell-main">
+                        <div class="headie">
+                            <h2> TYNET</h2>
+                        </div>
+                        <div>
+                            <h3 class="bee"> Create An Account</h3>
+                        </div>
+                        <div class="file">
+                            <button class="bag"><i class="fa fa-facebook"></i></button>
+                            <button class="bag"><i class="fa fa-google-plus"></i></button>
+                            <button class="bag"><i class="fa fa-linkedin"></i></button>
+                        </div>
+                        <div>
+                            <p class="pe"> or use your email for registration:</p>
+                        </div>
+                        <div class="alert alert-success" *ngIf="validDetails">
+                            <strong>{{validDetails}}</strong>
+                        </div>
+                        <div class="clay">
+                            <form class="form" [formGroup]='forms' novalidate (ngSubmit)="submitDetails()">
+                                <div class="form-group">
+                                    <label for=""> FIRST NAME</label>
+                                    <div class="bay">
+                                        <i class="fa fa-user-o"></i>
+                                        <input type="text" formControlName="name" [(ngModel)]="firstName">
+                                    </div>
+                                    <span style="color: red;" *ngIf="name?.invalid && name?.touched"> Please fill up
+                                        this entry</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> LAST NAME</label>
+                                    <div class="bay">
+                                        <i class="fa fa-user-o"></i>
+                                        <input type="text" formControlName="name" [(ngModel)]="lastName">
+                                    </div>
+                                    <span style="color: red;" *ngIf="name?.invalid && name?.touched"> Please fill up
+                                        this entry</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> EMAIL</label>
+                                    <div class="bay">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <input type="text" formControlName="email" [(ngModel)]="emailDet">
+                                    </div>
+                                    <span style="color: red;" *ngIf="email?.invalid && email?.touched"> Invalid
+                                        Email</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">PASSWORD</label>
+                                    <div class="bay">
+                                        <i class="fa fa-user-o"></i>
+                                        <input type="password" formControlName="pass" [(ngModel)]="passDet">
+                                    </div>
+                                    <span style="color: red;" *ngIf="pass?.invalid && pass?.touched"> Invalid
+                                        Password</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">PHONE NUMBER</label>
+                                    <div class="bay">
+                                        <i class="fa fa-phone"></i>
+                                        <input type="text" formControlName="phone" [(ngModel)]="phoneDet">
+                                    </div>
+                                    <span style="color: red;" *ngIf="phone?.invalid && phone?.touched"> Please fill up
+                                        this entry</span>
+                                </div>
+                                <div class="down2">
+                                    <button class="fill" [disabled]="forms?.invalid">
+                                        <span *ngIf="submitted" class="fa fa-spin fa-spinner"></span> SIGN UP
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="down">
+                            <span> Already an existing user?</span>
+                            <i></i>
+                            <span class="log"> LOG IN</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
